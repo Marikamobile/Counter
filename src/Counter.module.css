@@ -1,0 +1,24 @@
+.counter {
+    margin: 200px;
+    text-align: justify-all;
+    width: 200px;
+    background-color: ghostwhite;
+    border-radius: 5px;
+}
+.buttons {
+    margin:10px;
+}
+.error {
+    color: red;
+}
+.button{
+    margin: 10px;
+    background-color: burlywood;
+
+}
+.button:disabled{
+    margin: 10px;
+    background-color: burlywood;
+    opacity: 50%;
+
+}
