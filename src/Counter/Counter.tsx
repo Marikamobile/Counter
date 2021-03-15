@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import st from './Counter.module.css'
 import {Button} from "../Button/Button";
 import {CounterDisplay} from "./display-counter/Counter-display";
@@ -9,17 +9,23 @@ type CounterType = {
     count: number
     maxValue: number
     minValue: number
+    error: string | null
 }
 
 function Counter(props: CounterType) {
 
     return (
         <div className={`${st.counter}`}>
-            <CounterDisplay count={props.count} maxValue={props.maxValue}/>
-            <Button  onClick={props.inc} disabled={props.count === props.maxValue} children={'inc'}
-                    maxValue={props.maxValue}/>
-           <Button  onClick={props.reset} disabled={props.count === props.minValue} children={'reset'}
-                    minValue={props.minValue}/>
+            <div className={st.display_count}> {props.error !== null ? <p className={props.error === 'incorrect value!'? st.error: ''}>{props.error}</p>
+                : <CounterDisplay count={props.count} maxValue={props.maxValue}/>}
+            </div>
+            <div className={st.buttons_count}><Button onClick={props.inc}
+                                                      disabled={props.error !== null || props.count === props.maxValue}
+                                                      children={'inc'}
+                                                      maxValue={props.maxValue}/>
+                <Button onClick={props.reset} disabled={props.error !== null || props.count === props.minValue}
+                        children={'reset'}
+                        minValue={props.minValue}/></div>
         </div>
     )
 }

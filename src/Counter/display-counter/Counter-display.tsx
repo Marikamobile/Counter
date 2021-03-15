@@ -1,5 +1,4 @@
 import React from "react";
-import st from '../Counter.module.css'
 
 type CounterType = {
     count: number
@@ -9,8 +8,7 @@ type CounterType = {
 export function CounterDisplay (props: CounterType) {
 
     return (
-
-        <div className={props.count === props.maxValue ? st.error : ''}>{props.count}</div>
+        <div className='display-counter'>{props.count}</div>
     )
 }
 

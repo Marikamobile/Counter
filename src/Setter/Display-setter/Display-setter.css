@@ -1,0 +1,21 @@
+.form-inline {
+    display: grid;
+    grid-template-columns: 8ch auto;
+}
+
+.form-inline label {
+    margin: 5px 10px 5px 0;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.form-inline input {
+    width: 100px;
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+
+

@@ -1,14 +1,23 @@
-*{
+* {
 
 }
 
 
+body {
+    background: #f2f2f2;
+    font-family: montserrat, sans-serif;
+    font-weight: bolder;
+    color: #574240;
 
-body{
-  background:  #f2f2f2;
-  font-family: montserrat, sans-serif;
-  display: flex;
-  flex-direction: row;
-  justify-content:space-around;
-  flex-flow: wrap;
+}
+.row{
+    margin-top: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.child {
+    margin: 15px;
+    flex: 1 1 150px;
+    flex: 0 1 150px;
 }

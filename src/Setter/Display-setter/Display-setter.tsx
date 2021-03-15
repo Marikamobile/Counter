@@ -1,17 +1,18 @@
-import React, {ChangeEventHandler, useState} from "react";
-import st from './Display-setter.module.css'
+import React from "react";
+import'./Display-setter.css'
 
 type DisplaySetterPropsType = {
     onNewSetterValue: (e: any) => void
     value: number
     children: string
+    className: string | undefined
 
 }
 
 export function DisplaySetter(props: DisplaySetterPropsType) {
 
-    return (<div className={`${st.body} ${st.template_4up}`}>
+    return (<div className='form-inline'>
         <label>{props.children}</label>
-        <input type="number" id="number" value={props.value} onChange={props.onNewSetterValue} className={st.input}/>
+        <input type="number" id="number" value={props.value} onChange={props.onNewSetterValue} className={props.className}/>
     </div>)
 }

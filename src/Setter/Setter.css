@@ -1,18 +1,17 @@
- .counter {
+.counter {
     text-align: center;
-    width: 200px;
+    width: auto;
     border: 3px solid ghostwhite;
     border-radius: 5px;
     padding: 5px
 }
-.error {
-    color: red;
-}
-
-
-.display_count, .buttons_count{
+.display-set, .button-set{
     border: 3px solid ghostwhite;
     border-radius: 5px;
     padding: 6px;
-margin: 4px;
+    margin: 4px;
+}
+.error-display{
+    background: firebrick;
+    color: #f2f2f2;
 }
